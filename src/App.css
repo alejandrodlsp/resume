@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+@font-face 
+{
+    font-family: 'Bebas';
+    src: local('Bebas'), url(./fonts/bebas_neue/BebasNeue-Regular.ttf) format('truetype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face 
+{
+    font-family: 'Code';
+    src: local('Code'), url(./fonts/code/CODE_Light.otf) format('OpenType');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face 
+{
+    font-family: 'Code';
+    src: local('Code'), url(./fonts/code/CODE_Bold.otf) format('OpenType');
+    font-weight: bold; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face 
+{
+    font-family: 'Comfortaa';
+    src: local('Comfortaa'), url(./fonts/comfortaa/Comfortaa-Regular.ttf) format('truetype');
 }
 
-.App-link {
-  color: #61dafb;
+@font-face 
+{
+    font-family: 'Comfortaa';
+    src: local('Comfortaa'), url(./fonts/comfortaa/Comfortaa-Light.ttf) format('truetype');
+    font-weight: lighter; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face 
+{
+    font-family: 'Comfortaa';
+    src: local('Comfortaa'), url(./fonts/comfortaa/Comfortaa-Bold.ttf) format('truetype');
+    font-weight: bold; 
 }
+
+@font-face 
+{
+    font-family: 'Coolvetica';
+    src: local('Coolvetica'), url(./fonts/coolvetica/coolvetica_compressed rg.ttf) format('truetype');
+    font-variant: compressed;
+}
+
+
+@font-face 
+{
+    font-family: 'Coolvetica';
+    src: local('Coolvetica'), url(./fonts/coolvetica/coolvetica_condensed rg.ttf) format('truetype');
+    font-variant: condensed;
+}
+
+@font-face 
+{
+    font-family: 'Coolvetica';
+    src: local('Coolvetica'), url(./fonts/coolvetica/coolvetica_crammed rg.ttf) format('truetype');
+    font-variant: crammed;
+}
+
+@font-face 
+{
+    font-family: 'Coolvetica';
+    src: local('Coolvetica'), url(./fonts/coolvetica/coolvetica_rg.ttf) format('truetype');
+}
+
+

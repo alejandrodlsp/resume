@@ -1,0 +1,127 @@
+.navbar
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 85%;
+    color: #FBF5F3;
+}
+
+.navbar-container
+{
+    margin: auto;
+    height: 50px;
+    width: 80%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 1.2rem;
+}
+
+.navbar-title
+{   
+    height: 100%;
+    justify-self: start;
+    margin-right: 35px;
+    padding-top: 0.1rem;
+    margin-left: 24px;
+    text-decoration: none;
+    color: #FBF5F3;
+    font-size: 2.13rem;
+
+    font-family: 'Abel', sans-serif;
+}
+
+.nav-menu
+{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style: none;
+
+    position: relative;
+}
+
+.nav-button
+{
+    cursor: pointer;
+    padding: 0.65em 13px 0px 13px;
+    transition: all 0.4s ease-out;
+}
+
+.nav-button:hover
+{
+    background-color: #DE3C4B;
+}
+
+.nav-link
+{
+    margin-left: 5px;
+    font-size: 0.92rem;
+    font-family: 'Quicksand', serif;
+    font-weight: 400;
+    color: #FBF5F3;
+    text-decoration: none;
+}
+
+.menu-icon
+{
+    display: none;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1400px)
+{
+    .navbar-container
+    {
+        width: 95%;
+    }
+}
+
+
+@media screen and (max-width: 1000px)
+{
+    .nav-menu
+    {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 50px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active
+    {
+        background-color: #242222;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .nav-button
+    {
+        width: 100%;
+        padding: 0.7em 0;
+        padding-left: -0.3em;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+    }
+}

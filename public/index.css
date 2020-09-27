@@ -1,0 +1,18 @@
+@font-face 
+{
+    font-family: 'Bebas';
+    src: local('Bebas'), url(./fonts/bebas_neue/BebasNeue-Regular.ttf) format('truetype');
+}
+
+@font-face 
+{
+    font-family: 'Code';
+    src: local('Code'), url(./fonts/code/CODE_Light.otf) format('OpenType');
+}
+
+@font-face 
+{
+    font-family: 'Code';
+    src: local('Code'), url(./fonts/code/CODE_Bold.otf) format('OpenType');
+    font-weight: bold; 
+}

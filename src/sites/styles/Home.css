@@ -1,0 +1,89 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Image showcase */
+.image-showcase
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    overflow:hidden;
+}
+
+@media screen and (max-width: 1000px)
+{
+    .image-showcase
+    {
+        position: relative;
+    }
+}
+
+
+/* About me showcase */
+.about-container
+{
+    width: 100%;
+    background: #7E7F9A;
+    margin-top: 700px;
+}
+
+.about-title
+{
+    font-family: 'Abel', sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.about-content
+{
+    margin-top: 30px;
+    padding: 0 7rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px)
+{
+    .about-container
+    {
+        margin-top: -30px;
+    }
+
+    .about-title
+    {
+        font-size: 3.5rem;
+    }
+
+    .about-content
+    {
+        padding: 0 2.5rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* Professional projects */
+.professional-title-container
+{
+    font-family: 'Abel', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    background: #2E2836;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 1000px)
+{
+    .professional-title-container
+    {
+        font-size: 1.5rem;
+    }
+}
