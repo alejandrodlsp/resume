@@ -1,0 +1,37 @@
+{
+    "projects":
+    [
+        {
+            "title" : "Plane Physics",
+            "image-url": "./images/projects/project1.jpg",
+            "image-alt": "plane physics image",
+            "highlights": [ "C#, Unity Engine", "Physics-based air vehicle behaviours", "Modular air vehicle editor" ],
+            "description": "This is a air vehicle physics simulation I developed in my free time. It includes a fully modular system that divides the aircraft into it's individual components, making it very easy to create new types of aircraft using custom editor scripts. This side project that I made with help of a series of tutorials, taught me the power of physics based behaviours.",
+            "link": "#"
+        },
+        {
+            "title" : "Camera System",
+            "image-url": "./images/projects/project1.jpg",
+            "image-alt": "Camera system image",
+            "highlights": [ "C#, Unity Engine", "Customizable inspector behaviours", "Cinemachine virtual camera rig", "Dead, hard, and soft movement zones" ],
+            "description": "I developed a game camera system for the Unity Engine on my spare time. This camera system makes use of Unity's new Cinemachine package for some simple 'look at target' behaviour.",
+            "link": "#"
+        },
+        {
+            "title" : "Plane Physics",
+            "image-url": "./images/projects/project1.jpg",
+            "image-alt": "",
+            "highlights": [ "C#", "unity Engine", "Physics-based air vehicle behaviours", "Modular air vehicle editor" ],
+            "description": "This is a air vehicle physics simulation I developed in my free time. It includes a fully modular system that divides the aircraft into it's individual components, making it very easy to create new types of aircraft using custom editor scripts. This side project that I made with help of a series of tutorials, taught me the power of physics based behaviours.",
+            "link": "#"
+        },
+        {
+            "title" : "Plane Physics",
+            "image-url": "./images/projects/project1.jpg",
+            "image-alt": "",
+            "highlights": [ "C#", "unity Engine", "Physics-based air vehicle behaviours", "Modular air vehicle editor" ],
+            "description": "This is a air vehicle physics simulation I developed in my free time. It includes a fully modular system that divides the aircraft into it's individual components, making it very easy to create new types of aircraft using custom editor scripts. This side project that I made with help of a series of tutorials, taught me the power of physics based behaviours.",
+            "link": "#"
+        }
+    ]
+}

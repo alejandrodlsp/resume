@@ -3,18 +3,18 @@ import { Link } from 'react-router-dom'
 
 import './Navbar.css'
 
-function Navbar()
+function Navbar(props)
 {
     const [folderOpen, setFolderOpen] = useState(false)
 
     const toggleFolder = () => { setFolderOpen(!folderOpen); }
-    const closeFolder = () => { setFolderOpen(true);  }
+    const closeFolder = () => { setFolderOpen(false);  }
 
     return(
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <Link to="/" className="navbar-title">
+                    <Link to="/" className="navbar-title" onClick={closeFolder}>
                         Alex Santos
                     </Link>
 
@@ -25,33 +25,33 @@ function Navbar()
                     <div className={folderOpen ? 'nav-menu active' : 'nav-menu'}>
                         <div className="nav-button">
                             <i className="fi-xnsuxm-bulb-solid"/>
-                            <Link className="nav-link" to="/" onClick={closeFolder}>
+                            <div className="nav-link" to="/" onClick={ () => { closeFolder(); props.onAboutClick();}}>
                                 ABOUT
-                            </Link>
+                            </div>
                         </div>
                         <div className="nav-button">
-                            <i class="fi-xnsuxm-team-solid"></i>
-                            <Link className="nav-link" to="/services" onClick={closeFolder}>
-                                PROFESSIONAL WORK
-                            </Link>
-                        </div>
-                        <div className="nav-button">
-                            <i class="fi-xnsuxm-heart-solid"></i>
-                            <Link className="nav-link" to="/contact-us" onClick={closeFolder}>
+                            <i className="fi-xnsuxm-heart-solid"></i>
+                            <div className="nav-link" to="/contact-us" onClick={ () => { closeFolder(); props.onProjectClick();}}>
                                 PERSONAL PROJECTS
-                            </Link>
+                            </div>
                         </div>
                         <div className="nav-button">
-                            <i class="fi-xnsuxm-file-solid"></i>
-                            <Link className="nav-link" to="/contact-us" onClick={closeFolder}>
+                            <i className="fi-xnsuxm-lightning-solid"></i>
+                            <div className="nav-link" to="/services" onClick={ () => { closeFolder(); props.onSkillsClick();}}>
+                                SKILLS
+                            </div>
+                        </div>
+                        <div className="nav-button">
+                            <i className="fi-xnsuxm-file-solid"></i>
+                            <div className="nav-link" to="/contact-us" onClick={ () => { closeFolder(); props.onContactClick();}}>
                                 RESUME
-                            </Link>
+                            </div>
                         </div>
                         <div className="nav-button">
-                            <i class="fi-xnsuxm-comment-solid"></i>
-                            <Link className="nav-link" to="/contact-us" onClick={closeFolder}>
+                            <i className="fi-xnsuxm-comment-solid"></i>
+                            <div className="nav-link" to="/contact-us" onClick={closeFolder}>
                                 CONTACT
-                            </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
