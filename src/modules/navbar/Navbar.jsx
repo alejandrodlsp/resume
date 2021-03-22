@@ -23,33 +23,33 @@ function Navbar(props)
                     </div>
 
                     <div className={folderOpen ? 'nav-menu active' : 'nav-menu'}>
-                        <div className="nav-button">
+                        <div className="nav-button" onClick={ () => { closeFolder(); props.onAboutClick();}}>
                             <i className="fi-xnsuxm-bulb-solid"/>
-                            <div className="nav-link" to="/" onClick={ () => { closeFolder(); props.onAboutClick();}}>
+                            <div className="nav-link">
                                 ABOUT
                             </div>
                         </div>
-                        <div className="nav-button">
+                        <div className="nav-button" onClick={ () => { closeFolder(); props.onProjectClick();}}>
                             <i className="fi-xnsuxm-heart-solid"></i>
-                            <div className="nav-link" to="/contact-us" onClick={ () => { closeFolder(); props.onProjectClick();}}>
+                            <div className="nav-link">
                                 PERSONAL PROJECTS
                             </div>
                         </div>
-                        <div className="nav-button">
+                        <div className="nav-button" onClick={ () => { closeFolder(); props.onSkillsClick();}}>
                             <i className="fi-xnsuxm-lightning-solid"></i>
-                            <div className="nav-link" to="/services" onClick={ () => { closeFolder(); props.onSkillsClick();}}>
+                            <div className="nav-link">
                                 SKILLS
                             </div>
                         </div>
-                        <div className="nav-button">
+                        <div className="nav-button" onClick={ () => { closeFolder(); props.onResumeClick();}}>
                             <i className="fi-xnsuxm-file-solid"></i>
-                            <div className="nav-link" to="/contact-us" onClick={ () => { closeFolder(); props.onContactClick();}}>
+                            <div className="nav-link">
                                 RESUME
                             </div>
                         </div>
-                        <div className="nav-button">
+                        <div className="nav-button" onClick={ () => { closeFolder(); props.onContactClick();}}>
                             <i className="fi-xnsuxm-comment-solid"></i>
-                            <div className="nav-link" to="/contact-us" onClick={closeFolder}>
+                            <div className="nav-link">
                                 CONTACT
                             </div>
                         </div>

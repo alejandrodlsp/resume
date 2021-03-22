@@ -4,9 +4,14 @@ import './ProjectShowcase.css'
 
 function ProjectShowcase(props)
 {
+    const handleProjectClick = () =>
+    {
+        window.open(props.link, "_blank")
+    }
+
     return(
         <div className="container">
-            <div className="image-container">
+            <div className="image-container" onClick={handleProjectClick}>
                 <img src={props.image} alt={props.alt}/>
                 <div className="title-container">
                     <p className="title">{props.title}</p>

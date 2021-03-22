@@ -28,7 +28,7 @@ function Home() {
     const refContact = React.createRef();
     
     const handleAboutClick = () =>
-        refAbout.current.scrollIntoView({
+    refAbout.current.scrollIntoView({
         behavior: 'smooth'
     });
     const handleProjectClick = () =>
@@ -39,6 +39,10 @@ function Home() {
     refSkills.current.scrollIntoView({
         behavior: 'smooth'
     });
+    const handleResumeClick = () =>
+    {
+        window.open("./documents/Resume.pdf", "_blank")
+    }
     const handleContactClick = () =>
     refContact.current.scrollIntoView({
         behavior: 'smooth'
@@ -53,15 +57,17 @@ function Home() {
 
     return (
         <>
-            <Navbar onAboutClick={handleAboutClick} onProjectClick={handleProjectClick} onSkillsClick={handleSkillsClick} onContactClick={handleContactClick}/>
-            <video className="image-showcase" autoPlay={true} muted={true} repeat="true">
-                <source src="./images/videos/video.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
+            <Navbar onAboutClick={handleAboutClick} onResumeClick={handleResumeClick} onProjectClick={handleProjectClick} onSkillsClick={handleSkillsClick} onContactClick={handleContactClick}/>
+            <div className="image-showcase">
+                <video autoPlay={true} muted={true} repeat="true">
+                    <source src="./images/videos/video.mp4" type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
 
             <div className="about-container" ref={refAbout}>
                 <div className="about-title"> <p>About Me</p> </div>
-                <div className="about-content">I'm baby letterpress live-edge mustache, poke af wayfarers activated charcoal you probably haven't heard of them gentrify taxidermy mumblecore. Hexagon shoreditch direct trade venmo. Dreamcatcher hoodie tumeric brooklyn williamsburg. Artisan leggings shoreditch, post-ironic edison bulb wolf skateboard pinterest cray tbh adaptogen green juice lumbersexual iceland brooklyn. Crucifix plaid skateboard shaman, pitchfork ethical migas roof party biodiesel bespoke jean shorts readymade la croix vinyl.</div>
+                <div className="about-content">Hello, my name is Alejandro, and this is my online portfolio. I am a hobbyist programmer and a thrid year student of Computer Games Development at University of Limerick, Ireland. My main focus at the moment is on video game programming with Unity and the C# programming language with .Net based applications. I also specialise in micro controller and IoT programming, but I enjoy new challenges and taking any problems proposed to me. I'd love to chat about job opportunities, projects I have worked on, suggestions, video games or whatever is on your mind.</div>
             </div>
 
             <div className="professional-projects-container" ref={refProject}>
@@ -79,7 +85,7 @@ function Home() {
                                     row.map( (project) => 
                                     {
                                         projects_col_count += 1;                
-                                        return( <ProjectShowcase title={project["title"]} highlights={project["highlights"]} image={project["image-url"]} alt={project["image-alt"]} description={project["description"]} /> )
+                                        return( <ProjectShowcase link={project["link"]} title={project["title"]} highlights={project["highlights"]} image={project["image-url"]} alt={project["image-alt"]} description={project["description"]} /> )
                                     }) 
                                 }
                             </ConditionalWrapper>
@@ -89,37 +95,36 @@ function Home() {
                 }
             </div>
 
-            <div className="skills-container" ref={refSkills}>
+            <div className="skills-container" ref={refSkills} id="scrollto">
                 <div className="skills-row">
                     <div className="skills-section">
                         <div className="skills-section-components">
                             <div className="skills-section-title"> <p>Languages</p> </div>
-                            <Skill image="fi-hwluxl-copyright-wide" title="C# (4 years)"></Skill>
-                            <Skill image="fi-cwluxl-copyright-solid" title="C++ (3 years)"></Skill>
-                            <Skill image="fi-cnsuxl-python" title="Python (4 years)"></Skill>
-                            <Skill image="fi-snsuxl-java" title="Java (4 years)"></Skill>
-                            <Skill image="fi-snluxl-js" title="Java Script (3 years)"></Skill>
-                            <Skill image="fi-cnsuxl-microsoft-edge" title="Lua (1 year)"></Skill>
+                            <Skill image="fi-hwluxl-copyright-wide" title="C#"></Skill>
+                            <Skill image="fi-cwluxl-copyright-solid" title="C++"></Skill>
+                            <Skill image="fi-cnsuxl-python" title="Python"></Skill>
+                            <Skill image="fi-snsuxl-java" title="Java"></Skill>
+                            <Skill image="fi-snluxl-js" title="Java Script"></Skill>
+                            <Skill image="fi-cnsuxl-microsoft-edge" title="Lua"></Skill>
                         </div>
                     </div>
                     <div className="skills-section">
                         <div className="skills-section-components">
                             <div className="skills-section-title"> <p>Software</p> </div>
-                            <Skill image="fi-ctsuxs-circle" title="Unity Engine (4 years)"></Skill>
-                            <Skill image="fi-ctsuxs-circle" title="Visual Studio (4 years)"></Skill>
-                            <Skill image="fi-ctsuxs-circle" title="Git (3 years)"></Skill>
-                            <Skill image="fi-ctsuxs-circle" title="JIRA (1 year)"></Skill>
-                            <Skill image="fi-ctsuxs-circle" title="OpenGL (1 year)"></Skill>
-                            <Skill image="fi-ctsuxs-circle" title="UE 4 (1 year)"></Skill>
+                            <Skill image="fi-ctsuxs-circle" title="Unity Engine"></Skill>
+                            <Skill image="fi-ctsuxs-circle" title="Visual Studio"></Skill>
+                            <Skill image="fi-ctsuxs-circle" title="OpenGL"></Skill>
+                            <Skill image="fi-ctsuxs-circle" title="Git"></Skill>
+                            <Skill image="fi-ctsuxs-circle" title="JIRA"></Skill>
                         </div>
                     </div>
                     <div className="skills-section">
                         <div className="skills-section-components">
                             <div className="skills-section-title"> <p>Web</p> </div>
-                            <Skill image="fi-ctsuxs-circle" title="HTML 5 (3 years)"></Skill>
-                            <Skill image="fi-ctsuxs-circle" title="CSS 3 (3 years)"></Skill>
-                            <Skill image="fi-ctsuxs-circle" title="MySQL (2 years)"></Skill>
-                            <Skill image="fi-ctsuxs-circle" title="ReactJS (2 years)"></Skill>
+                            <Skill image="fi-ctsuxs-circle" title="HTML 5"></Skill>
+                            <Skill image="fi-ctsuxs-circle" title="CSS 3"></Skill>
+                            <Skill image="fi-ctsuxs-circle" title="MySQL"></Skill>
+                            <Skill image="fi-ctsuxs-circle" title="ReactJS"></Skill>
                         </div>
                     </div>
                 </div>
@@ -128,6 +133,25 @@ function Home() {
             <div className="contact-container" ref={refContact}>
                 <div className="contact-title">
                     Contact
+                </div>
+                <div className="contact-socialbar">
+                    <p>Alejandro De los Santos Puerto <br/> Co.Limerick, Ireland <br/> (+353) 89 431 6222</p>
+                    <a className="contact-socialbar-item socialbar-email" href="mailto:alejandrodlsp@hotmail.es" target="_blank">
+                        <i class="fi-xnsuxx-close-envelope-solid"></i>
+                        <p>alejandrodlsp@hotmail.es</p>
+                    </a>
+                    <a className="contact-socialbar-item socialbar-linkedin" href="https://www.linkedin.com/in/alejandro-de-los-santos-84152916b/" target="_blank">
+                        <i class="fi-snsuxl-linkedin"></i>
+                        <p>Alejandro de los Santos</p>
+                    </a>
+                    <a className="contact-socialbar-item socialbar-github" href="https://github.com/alejandrodlsp" target="_blank">
+                        <i class="fi-xnsuxl-github"></i>
+                        <p>alejandrodlsp</p>
+                    </a>
+                </div>
+
+                <div className="copyright">
+                    <i class="fi-cnsuxm-copyright-solid"></i> 2020 by Alejandro de los Santos 
                 </div>
             </div>
 
